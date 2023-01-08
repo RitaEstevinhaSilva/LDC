@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Towards Visual Languages</title>
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/p5.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="class.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="buttons" id="buttons-variation">
+
+      
+
+        <div>
+            <input type="button" class="button" id="repetitioButton" value="repetition" onclick="show('divRep')">
+            <div class="hiddenDivs" id="divRep">
+                <p class="text"> x repetition </p>
+                <input type="range" id="repeatX" min="1" max="22" value="1" class="slider">
+
+                <p class="text"> y repetition </p>
+                <input type="range" id="repeatY" min="1" max="14" value="1" class="slider">
+            </div>
+
+        </div>
+        <div>
+            <input type="button" class="button" value="colour variation" onclick="show('divColor')">
+            <div class="hiddenDivs" id="divColor">
+                <input type="color" id="inputColor" oninput="changeCol(this.value)">
+            </div>
+        </div>
+
+        <div>
+            <input type="button" class="button" value="positioning" onclick="show('divPos')">
+
+            <div class="hiddenDivs" id="divPos">
+                <p class="text"> x position </p>
+                <input type="range" id="changePositionX" min="-100" max="1200" class="slider"
+                    oninput="changePosiX(this.value)">
+
+                <p class="text"> y position </p>
+                <input type="range" id="changePositionY" min="-100" max="800" class="slider"
+                    oninput="changePosiY(this.value)">
+            </div>
+
+        </div>
+
+        <div>
+            <input type="button" class="button" value="shape transformation" onclick="show('divShap')">
+            <div class="hiddenDivs" id="divShap">
+                <p class="text"> width </p>
+                <input type="range" min="10" max="1500" class="slider" oninput="transfX(this.value)">
+                <p class="text"> height </p>
+                <input type="range" min="10" max="1500" class="slider" oninput="transfY(this.value)">
+            </div>
+        </div>
+
+        <div>
+            <input type="button" class="button" id="buttonChangeBackColor" value="background colour" onclick="show('divBackColor')">
+            <div class="hiddenDivs" id="divBackColor">
+                <input type="color" id="backColor" value="#ffffff">
+            </div>
+        </div>
+
+        <input type="button" class="button" value="format" onclick="show('divCanv')">
+        <div class="hiddenDivs" id="divCanv">
+            <p class="text"> width </p>
+            <input type="range" min="200" max="1107.95" class="slider" id="changeWidthCanvas" oninput="changeCanvasX()">
+            <p class="text"> height </p>
+            <input type="range" min="200" max="649" class="slider" id="changeHeightCanvas" oninput="changeCanvasY()">
+        </div>
+       
+       
+    </div>
+
+    <div class="buttons" id="buttons-option">
+
+      
+        <div>
+            <input type="button" class="button" value="clear"  onclick="reset()">
+
+        </div>
+
+        <div>
+            <input type="button" class="button" value="export" id="buttonExport" onclick="unToggleAll()" ondblclick="save()" >
+          
+
+        </div>
+
+       
+
+       
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
